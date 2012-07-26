@@ -1,0 +1,11 @@
+{
+    "name": "chef-cookbook-installer",
+    "type": "composer-installer",
+    "license": "MIT",
+    "autoload": {
+        "psr-0": {"Composer\\Installer": "src/"}
+    },
+    "extra": {
+        "class": "Composer\\Installer\\ChefCookbookInstaller"
+    }
+}
