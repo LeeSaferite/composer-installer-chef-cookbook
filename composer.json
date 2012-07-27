@@ -1,5 +1,5 @@
 {
-    "name": "chef-cookbook-installer",
+    "name": "dancras/chef-cookbook-installer",
     "type": "composer-installer",
     "license": "MIT",
     "autoload": {

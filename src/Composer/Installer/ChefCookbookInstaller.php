@@ -26,6 +26,8 @@ class ChefCookbookInstaller extends LibraryInstaller
      */
     public function getInstallPath(PackageInterface $package)
     {
-        return 'tools/chef/cookbooks' . $package->getPrettyName();
+        $prettyName = $package->getPrettyName();
+        list($vendor, $name) = explode('/', $prettyName);
+        return 'tools/chef/cookbooks/' . $name;
     }
 }
