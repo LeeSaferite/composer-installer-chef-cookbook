@@ -19,6 +19,21 @@
                 }
             }
         },
+        "opscode-cookbooks/apache2": {
+            "1.1.12": {
+                "name": "opscode-cookbooks/apache2",
+                "type": "chef-cookbook",
+                "version": "1.1.12",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:opscode-cookbooks/apache2.git",
+                    "reference": "1.1.12"
+                },
+                "require": {
+                    "dancras/chef-cookbook-installer": "*"
+                }
+            }
+        },
         "opscode-cookbooks/apt": {
             "1.4.4": {
                 "name": "opscode-cookbooks/apt",
@@ -28,6 +43,51 @@
                     "type": "git",
                     "url": "git@github.com:opscode-cookbooks/apt.git",
                     "reference": "1.4.4"
+                },
+                "require": {
+                    "dancras/chef-cookbook-installer": "*"
+                }
+            }
+        },
+        "opscode-cookbooks/mysql": {
+            "1.2.6": {
+                "name": "opscode-cookbooks/mysql",
+                "type": "chef-cookbook",
+                "version": "1.2.6",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:opscode-cookbooks/mysql.git",
+                    "reference": "1.2.6"
+                },
+                "require": {
+                    "dancras/chef-cookbook-installer": "*"
+                }
+            }
+        },
+        "opscode-cookbooks/openssl": {
+            "dev-master": {
+                "name": "opscode-cookbooks/openssl",
+                "type": "chef-cookbook",
+                "version": "dev-master",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:opscode-cookbooks/openssl.git",
+                    "reference": "master"
+                },
+                "require": {
+                    "dancras/chef-cookbook-installer": "*"
+                }
+            }
+        },
+        "opscode-cookbooks/php": {
+            "dev-master": {
+                "name": "opscode-cookbooks/php",
+                "type": "chef-cookbook",
+                "version": "dev-master",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:opscode-cookbooks/php.git",
+                    "reference": "master"
                 },
                 "require": {
                     "dancras/chef-cookbook-installer": "*"
