@@ -1,0 +1,38 @@
+{
+    "packages": {
+        "dancras/chef-cookbook-installer": {
+            "dev-master": {
+                "name": "dancras/chef-cookbook-installer",
+                "type": "composer-installer",
+                "version": "dev-master",
+                "license": "MIT",
+                "autoload": {
+                    "psr-0": {"Composer\\Installer": "src/"}
+                },
+                "extra": {
+                    "class": "Composer\\Installer\\ChefCookbookInstaller"
+                },
+                "source": {
+                    "type": "git",
+                    "url": "git://github.com/dancras/composer-installer-chef-cookbook.git",
+                    "reference": "master"
+                }
+            }
+        },
+        "opscode-cookbooks/apt": {
+            "1.4.4": {
+                "name": "opscode-cookbooks/apt",
+                "type": "chef-cookbook",
+                "version": "1.4.4",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:opscode-cookbooks/apt.git",
+                    "reference": "1.4.4"
+                },
+                "require": {
+                    "dancras/chef-cookbook-installer": "*"
+                }
+            }
+        }
+    }
+}
