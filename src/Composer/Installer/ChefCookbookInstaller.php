@@ -15,7 +15,7 @@ class ChefCookbookInstaller extends LibraryInstaller
      */
     public function supports($packageType)
     {
-        return 'chef-cookbook';
+        return $packageType === 'chef-cookbook';
     }
 
     /**
