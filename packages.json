@@ -65,6 +65,19 @@
             }
         },
         "opscode-cookbooks/mysql": {
+            "1.2.6": {
+                "name": "opscode-cookbooks/mysql",
+                "type": "chef-cookbook",
+                "version": "1.2.6",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:opscode-cookbooks/mysql.git",
+                    "reference": "1.2.6"
+                },
+                "require": {
+                    "dancras/chef-cookbook-installer": "*"
+                }
+            },
             "1.3.0": {
                 "name": "opscode-cookbooks/mysql",
                 "type": "chef-cookbook",
