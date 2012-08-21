@@ -35,14 +35,14 @@
             }
         },
         "opscode-cookbooks/apt": {
-            "1.4.4": {
+            "1.4.6": {
                 "name": "opscode-cookbooks/apt",
                 "type": "chef-cookbook",
-                "version": "1.4.4",
+                "version": "1.4.6",
                 "source": {
                     "type": "git",
                     "url": "git@github.com:opscode-cookbooks/apt.git",
-                    "reference": "1.4.4"
+                    "reference": "1.4.6"
                 },
                 "require": {
                     "dancras/chef-cookbook-installer": "*"
