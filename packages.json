@@ -19,6 +19,21 @@
                 }
             }
         },
+        "inviqa/chef-php-extra": {
+            "dev-master": {
+                "name": "inviqa/chef-php-extra",
+                "type": "chef-cookbook",
+                "version": "dev-master",
+                "source": {
+                    "type": "git",
+                    "url": "git://github.com/inviqa/chef-php-extra.git",
+                    "reference": "develop"
+                },
+                "require": {
+                    "dancras/chef-cookbook-installer": "*"
+                }
+            }
+        },
         "opscode-cookbooks/apache2": {
             "1.1.12": {
                 "name": "opscode-cookbooks/apache2",
