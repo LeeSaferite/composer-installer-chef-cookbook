@@ -136,6 +136,21 @@
                     "dancras/chef-cookbook-installer": "*"
                 }
             }
+        },
+        "opscode-cookbooks/yum": {
+            "1.4.6": {
+                "name": "opscode-cookbooks/yum",
+                "type": "chef-cookbook",
+                "version": "0.8.0",
+                "source": {
+                    "type": "git",
+                    "url": "git://github.com/opscode-cookbooks/yum.git",
+                    "reference": "0.8.0"
+                },
+                "require": {
+                    "dancras/chef-cookbook-installer": "*"
+                }
+            }
         }
     }
 }
