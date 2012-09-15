@@ -6,20 +6,30 @@ use Composer\Package\PackageInterface;
 use Composer\Installer\LibraryInstaller;
 
 /**
- * Simple installer to support chef-cookbook type
+ * Simple installer to support chef-cookbook and chef-role type
  */
 class ChefCookbookInstaller extends LibraryInstaller
 {
+    /**
+     * A map of package type to directory name.
+     *
+     * @var array
+     */
+    private static $packageDirs = array(
+        'chef-cookbook' => 'cookbooks',
+        'chef-role' => 'roles'
+    );
+
     /**
      * {@inheritDoc}
      */
     public function supports($packageType)
     {
-        return $packageType === 'chef-cookbook';
+        return in_array($packageType, self::$packageDirs);
     }
 
     /**
-     * Currently uses an absolute path to a chef cookbooks directory
+     * Adds cookbooks and roles into separate folders within chef-vendor.
      *
      * @param \Composer\Package\PackageInterface $package
      * @return string
@@ -28,6 +38,9 @@ class ChefCookbookInstaller extends LibraryInstaller
     {
         $prettyName = $package->getPrettyName();
         list($vendor, $name) = explode('/', $prettyName);
-        return 'tools/chef/cookbooks/' . $name;
+
+        $packageDir = self::$packageDirs[$package->getType()];
+
+        return "{$this->vendorDir}/chef-vendor/{$packageDir}/{$name}";
     }
 }
